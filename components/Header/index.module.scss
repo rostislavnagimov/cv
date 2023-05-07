@@ -1,5 +1,38 @@
 .header {
-    background-color: red;
-    height: 3em;
-    text-align: center;
+  width: 100vw;
+  background-color: #414046;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 375px) {
+    justify-content: start;
+  }
+}
+
+.navitem {
+  padding: 10px;
+  color:rgba(255, 255, 255, 0.900);
+}
+
+.navitem:hover {
+  text-shadow: 1px 1px 1px black;
+  font-weight: 500;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  font-weight: 700;
+  text-shadow: 1px 1px 10px black;
+
+  @media (max-width: 375px) {
+    display: none;
+  }
 }

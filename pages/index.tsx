@@ -5,7 +5,7 @@ import Body from "@/components/Body"
 
 const HomePage = () => (
   <div>
-    <Header />
+    <Header navData={navigation} />
     <Body>
       <>
         <h1
@@ -29,5 +29,12 @@ const HomePage = () => (
     <Footer />
   </div>
 )
+
+const navigation = [
+  {text: '{rostislav.cv}', href: '/', type: 'logo'},
+  {text: 'Experience', href: '/experience'},
+  {text: 'Projects', href: '/projects'},
+  {text: 'Contacts', href: '/contacts'},
+]
 
 export default HomePage
