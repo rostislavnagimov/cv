@@ -1,5 +1,7 @@
+@import "styles/_variables";
+
 .footer {
-    background-color: red;
+    background-color: $background-color;
     height: 3em;
     text-align: center;
 }

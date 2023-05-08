@@ -1,6 +1,8 @@
+@import "styles/_variables";
+
 .header {
   width: 100vw;
-  background-color: #414046;
+  background-color: $background-color;
   color: white;
 }
 
@@ -15,13 +17,12 @@
 
 .navitem {
   padding: 10px;
-  color:rgba(255, 255, 255, 0.900);
+  opacity: 0,7;
 }
 
 .navitem:hover {
   text-shadow: 1px 1px 1px black;
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
 }
 
 .logo {
