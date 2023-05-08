@@ -4,12 +4,12 @@ import { NavItemPropsType } from "./types";
 
 import styles from './index.module.scss'
 
-const NavItem: React.FC<NavItemPropsType> = ({ text, href, isActive, type }) => (
+const NavItem: React.FC<NavItemPropsType> = ({ text, href, isActive, type='item' }) => (
   <Link href={href}>
     <div
-      className={type === 'logo' ? styles.logo : styles.navitem}
+      className={styles[`header__navigation__${type}${isActive ? '--selected' : ''}`]}
     >
-      {text}
+      {isActive ? `{${text}}` : text}
     </div>
   </Link>
 )

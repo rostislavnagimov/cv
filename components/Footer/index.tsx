@@ -4,7 +4,8 @@ import styles from './index.module.scss'
 
 const Footer = () => (
     <div className={styles.footer}>
-        <p>Footer content</p>
+        <p>Made by old-fashioned boring non-artifical intellegence</p>
+        <p>2023</p>
     </div>
 )
 

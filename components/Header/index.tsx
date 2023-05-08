@@ -5,17 +5,19 @@ import { HeaderProps } from './types'
 
 import styles from './index.module.scss'
 
-const Header: React.FC<HeaderProps> = ({ navData }) => {
-  const location = document.location
-  console.log(location)
-  return(
-  <header className={styles.header}>
-    <nav className={styles.nav}>
+const Header: React.FC<HeaderProps> = ({ navData }) => (
+  <header className={styles['header']}>
+    <nav className={styles['header__navigation']}>
       {navData.map((item) => (
-        <NavItem href={item.href} type={item.type} text={item.text} />
+        <NavItem
+          text={item.text}
+          href={item.href}
+          type={item.type}
+          isActive={item.href === document.location.pathname}
+        />
       ))}
     </nav>
   </header>
-)}
+)
 
 export default Header

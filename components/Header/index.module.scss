@@ -2,38 +2,53 @@
 
 .header {
   width: 100vw;
-  background-color: $background-color;
+  background-color: $black;
   color: white;
-}
 
-.nav {
-  display: flex;
-  justify-content: flex-end;
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+  
+    @media (max-width: $small-display-breakpoint) {
+      justify-content: start;
+    }
 
-  @media (max-width: 375px) {
-    justify-content: start;
+    &__item {
+      padding: $space-0;
+      opacity: 0.5;
+
+      @media (max-width: $extra-small-display-breakpoint) {
+        font-size: small;
+      }
+    
+      &--selected {
+        padding: $space-0;
+        font-weight: bold;
+        background-color: $light-black;
+
+        @media (max-width: $extra-small-display-breakpoint) {
+          font-size: small;
+        }
+      }
+    }
+
+    &__item:hover {
+      opacity: 1;
+      background-color: $lighter-black;
+    }
+
+    &__logo, 
+    &__logo--selected {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: $space-0;
+      font-weight: bold;
+    
+      @media (max-width: $small-display-breakpoint) {
+        display: none;
+      }
+    }
   }
 }
 
-.navitem {
-  padding: 10px;
-  opacity: 0,7;
-}
-
-.navitem:hover {
-  text-shadow: 1px 1px 1px black;
-  font-weight: 600;
-}
-
-.logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px;
-  font-weight: 700;
-  text-shadow: 1px 1px 10px black;
-
-  @media (max-width: 375px) {
-    display: none;
-  }
-}

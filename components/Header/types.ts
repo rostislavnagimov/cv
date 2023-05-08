@@ -2,7 +2,7 @@ export interface NavItemPropsType {
   text: string
   href: string
   isActive?: boolean
-  type?: string
+  type?: 'logo' | 'item'
 }
 
 export interface HeaderProps {
