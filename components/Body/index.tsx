@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react'
 
 import styles from './index.module.scss'
 
-const Body: React.FC<BodyProps> = (props) => (
+const Body: React.FC<BodyProps> = ({children}) => (
     <div className={styles['body']}>
-        {props.children}
+        {children}
     </div>
 )
 

@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+  }
+
+@mixin dynamic-col($number) {
+  .col-#{$number} {
+      grid-column: auto/span #{$number};
+  }
+}
+
+@for $i from 1 through 12 {
+  @include dynamic-col($i);
+}

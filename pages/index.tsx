@@ -1,28 +1,21 @@
 import React from 'react'
 
-import Body from "@/components/Body"
+import CVItem, { CVItemProps } from '@/components/Resume'
 
 const HomePage = () => (
-  <Body>
-    <>
-      <h1
-        className="
-          mt-16
-          text-center
-          bg-blue-500
-          hover:bg-red-500
-          transition
-          duration-500
-          ease-in-out
-          py-2
-          px-4
-          rounded-full
-        "
-      >
-        Some initial text instead of 'Hello world!'
-      </h1>
-    </>
-  </Body>
+  <CVItem itemData={data} />
 )
+
+const data: Array<CVItemProps> = [
+  {
+    name: 'Name',
+    content: (<><p>Content</p><p>Content</p><p>Content</p><p>Content</p><p>Content</p><p>Content</p></>)
+  },
+  {name: 'Name2', content: 'Content2'},
+  {name: 'Name3', content: 'Content3'},
+  {name: 'Name4', content: 'Content4'},
+  {name: 'Name5', content: 'Content5'},
+  {name: 'Name6', content: 'Content6'},
+]
 
 export default HomePage
