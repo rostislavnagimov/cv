@@ -8,8 +8,9 @@ import styles from './index.module.scss'
 const Header: React.FC<HeaderProps> = ({ navData }) => (
   <header className={styles['header']}>
     <nav className={styles['header__navigation']}>
-      {navData.map((item) => (
+      {navData.map((item, index) => (
         <NavItem
+          key={index}
           text={item.text}
           href={item.href}
           type={item.type}

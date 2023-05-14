@@ -19,7 +19,7 @@ const HomePage = () => (
           rounded-full
         "
       >
-        Some initial text instead of 'Hello world!'
+        Some initial text
       </h1>
     </>
   </Body>

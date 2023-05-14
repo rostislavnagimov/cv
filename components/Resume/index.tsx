@@ -9,8 +9,8 @@ import styles from './index.module.scss'
 
 const Resume: React.FC<itemData> = ({ itemData }) => (
   <div className={styles['resume']}>
-    {Object.entries(itemData).map(([name, content]) => (
-      <div className={styles['resume__item']}>
+    {Object.entries(itemData).map(([name, content], index) => (
+      <div className={styles['resume__item']} key={index}>
         <Row>
           <Col span={2}>
             <div className={styles['resume__item__name']}>
@@ -22,9 +22,7 @@ const Resume: React.FC<itemData> = ({ itemData }) => (
               {typeof content === 'string' && content}
               {Array.isArray(content) && (
                 <ul>
-                  {content.map((string) => {
-                    console.log(replacer(string))
-                    return (
+                  {content.map((string) => (
                     <>
                       {string && (
                         <li>
@@ -32,7 +30,7 @@ const Resume: React.FC<itemData> = ({ itemData }) => (
                         </li>
                       )}
                     </>
-                  )})}
+                  ))}
                 </ul>
               )}
             </div>
