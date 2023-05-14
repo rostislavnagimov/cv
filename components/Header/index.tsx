@@ -8,15 +8,17 @@ import styles from './index.module.scss'
 const Header: React.FC<HeaderProps> = ({ navData }) => (
   <header className={styles['header']}>
     <nav className={styles['header__navigation']}>
-      {navData.map((item, index) => (
+      {navData.map((item, index) => {
+        console.log('Location: ', document.location.pathname)
+        return (
         <NavItem
           key={index}
           text={item.text}
           href={item.href}
           type={item.type}
-          isActive={item.href === document.location.pathname}
+          isActive={`/cv${item.href}` === document.location.pathname}
         />
-      ))}
+      )})}
     </nav>
   </header>
 )
