@@ -23,10 +23,10 @@ const App = ({ Component, pageProps }: AppProps) => (
   )
 
 const navigation: Array<NavItemPropsType> = [
-  {text: 'rostislav.cv', href: '/', type: 'logo'},
-  {text: '.experience', href: '/experience'},
-  {text: '.projects', href: '/projects'},
-  {text: '.contacts', href: '/contacts'},
+  {text: 'rostislav.cv', href: '/cv/', type: 'logo'},
+  {text: '.experience', href: '/cv/experience'},
+  {text: '.projects', href: '/cv/projects'},
+  {text: '.contacts', href: '/cv/contacts'},
 ]
 
 export default App
