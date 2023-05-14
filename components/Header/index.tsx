@@ -11,14 +11,15 @@ const Header: React.FC<HeaderProps> = ({ navData }) => (
       {navData.map((item, index) => {
         console.log('Location: ', document.location.pathname)
         return (
-        <NavItem
-          key={index}
-          text={item.text}
-          href={item.href}
-          type={item.type}
-          isActive={`/cv${item.href}` === document.location.pathname}
-        />
-      )})}
+          <NavItem
+            key={index}
+            text={item.text}
+            href={item.href}
+            type={item.type}
+            isActive={`/cv${item.href}` === document.location.pathname}
+          />
+        )
+      })}
     </nav>
   </header>
 )
