@@ -1,0 +1,12 @@
+@import "styles/_variables";
+
+.external-link {
+  margin: $space-0;
+
+  &:hover {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.513);
+  }
+  &:active {
+    color: red;
+  }
+}

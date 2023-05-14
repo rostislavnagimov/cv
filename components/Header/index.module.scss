@@ -24,7 +24,7 @@
       &--selected {
         padding: $space-0;
         font-weight: bold;
-        background-color: mix($black, rgba(255, 255, 255, 0.4));
+        background-color: $light-black;
 
         @media (max-width: $extra-small-display-breakpoint) {
           font-size: small;
@@ -34,7 +34,7 @@
 
     &__item:hover {
       opacity: 1;
-      background-color: mix($black, rgba(255, 255, 255, 0.5));
+      background-color: $lighter-black;
     }
 
     &__logo, 

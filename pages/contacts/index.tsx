@@ -1,28 +1,39 @@
 import React from 'react'
+import { Row, Col } from '@/components/Grid/Index'
+import email from '@/components/Contacts/email'
+import telegram from '@/components/Contacts/telegram'
 
-import Body from "@/components/Body"
-
-const HomePage = () => (
-  <Body>
-    <>
-      <h1
-        className="
-          mt-16
-          text-center
-          bg-blue-500
-          hover:bg-red-500
-          transition
-          duration-500
-          ease-in-out
-          py-2
-          px-4
-          rounded-full
-        "
-      >
-        Some initial text instead of 'Hello world!'
-      </h1>
-    </>
-  </Body>
+const Contacts = () => (
+  <>
+    <Row>
+      <Col>
+        {email({
+          address: 'rostislav.nagimov@gmail.com',
+          template: {
+            subject: 'Тема письма',
+            body: 'Тело письма',
+            cc: 'rostislav.nagimov@ya.ru',
+            bcc: 'rostislav.nagimov@yahoo.com'
+          },
+          alias: 'Напиши мне!'
+        })}
+      </Col>
+      <Col>
+      {telegram({
+          name: 'rostislavnagimov',
+          alias: 'Напиши в телегу'
+        })}
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        ЛинкедИн
+      </Col>
+      <Col>
+        Фейсбук
+      </Col>
+    </Row>
+  </>
 )
 
-export default HomePage
+export default Contacts
