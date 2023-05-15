@@ -2,13 +2,20 @@
   @return mix($color, white, $number);
 }
 
+@keyframes fade-in {
+  0% {opacity: 0; transform: translateY(-10px)}
+  80% {opacity: 1; transform: translateY(5px)}
+  100% {opacity: 1; transform: translateY(0)}
+}
+
 $medium-display-breakpoint: 600px;
 $small-display-breakpoint: 400px;
 $extra-small-display-breakpoint: 300px;
 
-$black: rgb(40, 101, 89);
-$light-black: enlight($black, 70%);
-$lighter-black: enlight($black, 65%);
-$lightest-black: enlight($black, 10%);
+$color: rgb(20, 70, 64);
+$shadow-color: enlight($color, 30%);
+$light-color: enlight($color, 70%);
+$lighter-color: enlight($color, 65%);
+$lightest-color: enlight($color, 10%);
 
 $space-0: 10px;

@@ -18,19 +18,21 @@ const Resume: React.FC<itemData> = ({ itemData }) => (
           </Col>
           <Col span={10}>
             <div className={styles['resume__item__content']}>
-              {typeof content === 'string' && <p>{content}</p>}
+              {typeof content === 'string' && (
+                <p className={styles['resume__item__content__string']}>{content}</p>
+              )}
               {Array.isArray(content) && (
-                <ul>
+                <>
                   {content.map((string, index) => (
                     <>
                       {string && (
-                        <li key={index}>
+                        <p key={index} className={styles['resume__item__content__string']}>
                           {replacer(string)}
-                        </li>
+                        </p>
                       )}
                     </>
                   ))}
-                </ul>
+                </>
               )}
             </div>
           </Col>

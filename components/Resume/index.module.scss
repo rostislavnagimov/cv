@@ -2,20 +2,18 @@
 
 .resume {
   padding: 10px;
-  animation: fade-in 1s forwards;
   
   &__item {
     margin-bottom: $space-0;
 
     &__name {
       box-sizing: border-box;
-      padding: 0 5px 0 5px;
-      box-shadow: 5px 5px 10px rgba(41, 43, 50, 0.343);
+      padding: 5px;
+      box-shadow: 5px 5px 10px $shadow-color;
       border-radius: 6px;
-      background-color: $lighter-black;
+      background-color: $lighter-color;
       color: white;
       width: 100%;
-      animation: fade-in 2s forwards;
     }
 
     &__content {
@@ -23,21 +21,26 @@
       padding-left: 10px;
       padding-right: 10px;
       box-sizing: border-box;
-      border: 1px solid $lighter-black;
+      box-shadow: 5px 5px 10px $shadow-color;
+      border: 1px solid $lighter-color;
       border-radius: 9px;
-      background-color: $lightest-black;
+      background-color: $lightest-color;
       width: 100%;
-      animation: fade-in 2s forwards;
 
-      * {
-        animation: fade-in 3s forwards;
-      }
-      
+    &__string {
+      margin: 5px;
+    }
     }
   }
 }
 
-@keyframes fade-in {
-  0% {opacity: 0; transform: translateY(-5%)}
-  100% {opacity: 1; transform: translateY(0)}
+@mixin seq-fade ($number) {
+  .resume > :nth-child(#{$number}) {
+    opacity: 0;
+    animation: fade-in 2s forwards (#{$number * 0.25}s);
+  }
+}
+
+@for $i from 1 through 5  {
+  @include seq-fade($i);
 }
