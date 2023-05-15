@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 
 import { Row, Col } from '@/components/Grid/Index'
-import email from '../Contacts/email'
 import { JSONObject } from '@/types/types'
 import replacer from '../Contacts/replacer'
 
@@ -19,13 +18,13 @@ const Resume: React.FC<itemData> = ({ itemData }) => (
           </Col>
           <Col span={10}>
             <div className={styles['resume__item__content']}>
-              {typeof content === 'string' && content}
+              {typeof content === 'string' && <p>{content}</p>}
               {Array.isArray(content) && (
                 <ul>
-                  {content.map((string) => (
+                  {content.map((string, index) => (
                     <>
                       {string && (
-                        <li>
+                        <li key={index}>
                           {replacer(string)}
                         </li>
                       )}

@@ -30,11 +30,11 @@
           font-size: small;
         }
       }
-    }
 
-    &__item:hover {
-      opacity: 1;
-      background-color: $lighter-black;
+      &:hover {
+        opacity: 1;
+        background-color: $lighter-black;
+      }
     }
 
     &__logo, 

@@ -1,34 +1,43 @@
 @import "styles/_variables";
 
 .resume {
-  border: 3px double black;
   padding: 10px;
+  animation: fade-in 1s forwards;
   
   &__item {
-    // border: 1px dashed green;
     margin-bottom: $space-0;
 
     &__name {
-      // border-bottom: 3px solid $black;
-      // border-right: 3px solid $black;
-      // border-top: 1px solid $black;
-      // border-left: 1px solid $black;
+      box-sizing: border-box;
+      padding: 0 5px 0 5px;
       box-shadow: 5px 5px 10px rgba(41, 43, 50, 0.343);
       border-radius: 6px;
       background-color: $lighter-black;
       color: white;
+      width: 100%;
+      animation: fade-in 2s forwards;
     }
 
     &__content {
       text-align: start;
-      margin-left: $space-0;
       padding-left: 10px;
-      // border-bottom: 3px solid $black;
-      // border-right: 3px solid $black;
-      // border-top: 1px solid $black;
-      // border-left: 1px solid $black;
+      padding-right: 10px;
+      box-sizing: border-box;
+      border: 1px solid $lighter-black;
       border-radius: 9px;
-      background-color:beige;
+      background-color: $lightest-black;
+      width: 100%;
+      animation: fade-in 2s forwards;
+
+      * {
+        animation: fade-in 3s forwards;
+      }
+      
     }
   }
+}
+
+@keyframes fade-in {
+  0% {opacity: 0; transform: translateY(-5%)}
+  100% {opacity: 1; transform: translateY(0)}
 }

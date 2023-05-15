@@ -1,12 +1,18 @@
 @import "styles/_variables";
 
 .external-link {
-  margin: $space-0;
+  background-color: $lighter-black;
+  color: $lightest-black;
+  border-radius: 3px;
+  padding: 1px 5px 1px 5px;
+  border: 1px solid $black;
 
   &:hover {
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.513);
+    text-shadow: 1px 1px 10px $black;
+    font-weight: bold;
   }
   &:active {
-    color: red;
+    font-size: small;
+    opacity: 0.8;
   }
 }

@@ -2,11 +2,13 @@
   @return mix($color, white, $number);
 }
 
+$medium-display-breakpoint: 600px;
 $small-display-breakpoint: 400px;
-$extra-small-display-breakpoint: 293px;
+$extra-small-display-breakpoint: 300px;
 
-$black: rgb(0, 0, 0);
+$black: rgb(40, 101, 89);
 $light-black: enlight($black, 70%);
 $lighter-black: enlight($black, 65%);
+$lightest-black: enlight($black, 10%);
 
 $space-0: 10px;

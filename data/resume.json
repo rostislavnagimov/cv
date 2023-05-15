@@ -1,16 +1,18 @@
 {
   "Name": "Rostislav Nagimov",
-  "Preferable position": "Front-end developer (ReactJS/NextJS/TypeScript)",
+  "Preferable position": "Front-end developer (ReactJS | NextJS | TypeScript)",
   "Contacts": [
     "Email: /email/",
     "Telegram: /telegram/"
   ],
   "Skills": [
-    "React/Next component based development(including Bootstrap and Ant Design components)",
+    "ReactJS/NextJS component based development (including Bootstrap and Ant Design components)",
     "HTML and layout",
-    "CSS(SCSS, LESS, Tailwind, Bootstrap)",
-    "JS(ES6+)",
-    "TypeScript"
+    "CSS (SCSS, LESS, Tailwind, Bootstrap)",
+    "JS (ES6+)",
+    "TypeScript",
+    "Redux/Redux Toolkit",
+    "Git (GitHub)"
   ],
   "Experience" : [
     "10 month commercial experience as a Front-end developer",
