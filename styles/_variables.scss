@@ -3,8 +3,8 @@
 }
 
 @keyframes fade-in {
-  0% {opacity: 0; transform: translateY(-10px)}
-  80% {opacity: 1; transform: translateY(5px)}
+  0% {opacity: 0; transform: translateY(-10px); filter: saturate(0) blur(5px);}
+  80% {opacity: 1; transform: translateY(5px); filter: saturate(0) blur(1px)}
   100% {opacity: 1; transform: translateY(0)}
 }
 
@@ -13,9 +13,8 @@ $small-display-breakpoint: 400px;
 $extra-small-display-breakpoint: 300px;
 
 $color: rgb(20, 70, 64);
-$shadow-color: enlight($color, 30%);
 $light-color: enlight($color, 70%);
-$lighter-color: enlight($color, 65%);
+$lighter-color: enlight($color, 30%);
 $lightest-color: enlight($color, 10%);
 
 $space-0: 10px;
